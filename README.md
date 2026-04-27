@@ -49,7 +49,7 @@ A high-dimensional (~100D) chemical sensometabolome interacts with a relatively 
 - Chemical PCs: 85.5%
 - Linguistic PCs: 13.7%
 
-**Conclusion:** The 6D taste space acts as an asymmetric filter—preserving chemical structure but discarding most linguistic information—supporting the taste bottleneck hypothesis.
+**Conclusion:** The 6D taste space acts as an asymmetric filter preserving chemical structure but discarding most linguistic information thus supporting the taste bottleneck hypothesis.
 
 
 ## Dependencies
