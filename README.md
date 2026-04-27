@@ -1,5 +1,8 @@
 # CCA: Canonical Correlation Analysis of Wine Chemistry and Language
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+
 This repository contains the canonical correlation analysis (CCA) pipeline used to test the "taste bottleneck" hypothesis in wine perception research.
 
 ## Hypothesis
