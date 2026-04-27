@@ -1,4 +1,4 @@
-D:\miniconda3\envs\pythonProject\python.exe C:/Users/PC1/PycharmProjects/pythonProject1/files/LLM/script2.py
+D:\miniconda3\envs\pythonProject\python.exe C:/Users/PC1/PycharmProjects/pythonProject1/files/LLM/script.py
 Chemical matrix shape: (1599, 11)
 Chemical features: ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']
 
@@ -107,6 +107,6 @@ Permutation test results (n=1000):
   Null distribution mean: 0.205
   Null distribution std:  0.005
   p-value: 0.5000
-  ✗ Correlation is NOT significant — likely spurious
+  ✗ Correlation is not significant 
 
 Process finished with exit code 0
