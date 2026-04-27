@@ -1,0 +1,112 @@
+D:\miniconda3\envs\pythonProject\python.exe C:/Users/PC1/PycharmProjects/pythonProject1/files/LLM/script2.py
+Chemical matrix shape: (1599, 11)
+Chemical features: ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']
+
+[INFO] Downloading Kaggle Wine Reviews dataset...
+Warning: Looks like you're using an outdated `kagglehub` version, please consider updating (latest version: 1.0.0)
+Downloaded to: C:\Users\PC1\.cache\kagglehub\datasets\zynicide\wine-reviews\versions\4
+Found CSV files: ['C:\\Users\\PC1\\.cache\\kagglehub\\datasets\\zynicide\\wine-reviews\\versions\\4\\winemag-data-130k-v2.csv', 'C:\\Users\\PC1\\.cache\\kagglehub\\datasets\\zynicide\\wine-reviews\\versions\\4\\winemag-data_first150k.csv']
+Loading CSV from: C:\Users\PC1\.cache\kagglehub\datasets\zynicide\wine-reviews\versions\4\winemag-data-130k-v2.csv
+Loaded 129971 wine reviews
+Columns: ['Unnamed: 0', 'country', 'description', 'designation', 'points', 'price', 'province', 'region_1', 'region_2', 'taster_name', 'taster_twitter_handle', 'title', 'variety', 'winery']
+[INFO] Creating TF-IDF matrix from wine descriptions...
+Raw review TF-IDF matrix shape: (129971, 72)
+Sensory vocabulary used: 72 terms
+Filtered TF-IDF matrix (non-zero rows): (128827, 72)
+Removed 1144 rows with no sensory terms
+Sampled Y matrix shape (matching X): (1599, 72)
+Sensory vocabulary size: 72
+
+[INFO] Running CCA with 11 components
+
+============================================================
+DIRECT CORRELATION (11D Chemistry ↔ 72D Language - Real Reviews)
+============================================================
+Number of components: 11
+First 5 canonical correlations: [0.279, 0.246, 0.242, 0.227, 0.216]
+Mean correlation: 0.205
+
+============================================================
+MEDIATED CORRELATION (via 6D Taste Space Bottleneck)
+============================================================
+Canonical correlations: [0.112, 0.072, 0.069, 0.036, 0.024, 0.011]
+Mean correlation: 0.054
+
+============================================================
+HYPOTHESIS TEST RESULT (Real Wine Review Data)
+============================================================
+Direct correlation (11D ↔ 72D):     0.205
+Mediated correlation (6D ↔ 6D):             0.054
+Absolute improvement:                       -0.151
+Relative improvement:                       -73.6%
+
+✗ NOT SUPPORTED: Bottleneck did not improve correlation.
+
+============================================================
+INFORMATION BOTTLENECK ANALYSIS
+============================================================
+Chemistry Variance Preserved in 6D Taste Space: 85.5%
+Language Variance Preserved in 6D Taste Space:  13.7%
+Chemistry information discarded:                14.5%
+Language information discarded:                 86.3%
+
+Conclusion: The 6D bottleneck discards substantial chemical nuance
+while preserving key sensory-relevant variance, explaining the
+'Autonomy of Syntax' phenomenon.
+
+============================================================
+TOP SENSORY TERMS CORRELATING WITH 6D TASTE SPACE
+============================================================
+  full-bodied          r = nan
+  light-bodied         r = nan
+  oaked                r = 0.103
+  mocha                r = 0.079
+  apple                r = 0.074
+  aromatic             r = 0.074
+  earthy               r = 0.065
+  jammy                r = 0.063
+  leather              r = 0.063
+  citrus               r = 0.062
+  vanilla              r = 0.062
+  bitter               r = 0.061
+  pepper               r = 0.061
+  elegant              r = 0.059
+  tannins              r = 0.059
+
+============================================================
+SUMMARY STATISTICS FOR MANUSCRIPT
+============================================================
+Chemical samples (n):                 1599
+Chemical features (p):                11
+Sensory features (q):                 72
+Direct CCA mean correlation:          0.205
+Mediated CCA mean correlation (6D):   0.054
+Correlation improvement:              +-0.151
+Chemistry variance @ 6D:              85.5%
+Language variance @ 6D:               13.7%
+
+============================================================
+SCRIPT COMPLETED SUCCESSFULLY
+============================================================
+
+============================================================
+KEY FINDING FOR MANUSCRIPT
+============================================================
+The 6D taste space bottleneck:
+  • Preserves 85.5% of chemical information
+  • Preserves only 13.7% of linguistic information
+  • Reduces chemistry-language correlation from 0.205 to 0.054
+
+→ This asymmetric information loss explains why wine terminology
+  operates semi-autonomously from underlying chemistry.
+→ Supports the 'Autonomy of Syntax' hypothesis in oenological language.
+
+[INFO] Running permutation test...
+Permutation test results (n=1000):
+  Observed correlation: 0.205
+  Null distribution mean: 0.205
+  Null distribution std:  0.005
+  p-value: 0.5000
+  ✗ Correlation is NOT significant — likely spurious
+
+Process finished with exit code 0
